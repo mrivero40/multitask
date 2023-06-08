@@ -5,21 +5,29 @@ import './TodoCounter.css';
 const styleH1 = {
     fontSize: "2rem",
     textAlign: "center",
-    fontFamily: "Oxygen",
+    fontFamily: "Ubuntu",
     margin: 0,
     padding: "2rem",
+    color: "#B3B3B3",
+};
+
+const spanH1 = {
+    color: "#F5B041",
 };
 
 function TodoCounter({ total, completed }) {
     return (
         <header>
             <h1 style={styleH1}>
-                APP Lista de tareas
+                <span style={spanH1}>APP</span> Lista de tareas
             </h1>
             <h2 style={{
-                textAlign: "center",                
+                textAlign: "center",
+                fontFamily: "Ubuntu",
+                fontWeight: "300",
+                margin: 0,
             }}>
-                Completadas {completed} de {total} TAREAS !!
+                Completadas {completed} de {total} TAREAS!!
             </h2>
             <h3>
                 Organiza las tareas diarias/semanales/mensuales.
