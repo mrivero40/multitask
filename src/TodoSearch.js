@@ -1,6 +1,10 @@
+import "./TodoSearch.css";
+
 function TodoSearch() {
     return (
-        <input placeholder="Terminar el curso de React" />
+        <div className="search-container">
+            <input placeholder="Introduce para buscar" />
+        </div>
     );
 };
 

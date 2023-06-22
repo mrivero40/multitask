@@ -27,7 +27,7 @@ function TodoCounter({ total, completed }) {
                 fontWeight: "300",
                 margin: 0,
             }}>
-                Completadas {completed} de {total} TAREAS!!
+                Completadas <span style={{color: "green", fontWeight: "bold",}}>{completed}</span> de <span style={{color: "red", fontWeight: "bold",}}>{total}</span> TAREAS!!
             </h2>
             <h3>
                 Organiza las tareas diarias/semanales/mensuales.
