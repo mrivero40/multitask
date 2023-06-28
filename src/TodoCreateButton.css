@@ -1,7 +1,7 @@
 .button-create {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(245, 176, 65);
-    box-shadow: .4rem .4rem 3rem rgba(171, 175, 177, 0.6);
+    box-shadow: 0 0 2rem #B3B3B3;
     border: none;
     border-radius: 50%;
     cursor: pointer;
