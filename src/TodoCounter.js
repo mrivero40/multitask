@@ -1,5 +1,5 @@
 // Destructurando props con el nombre de la props.propiedad que queremos utilizar = recibir props y utilizar props.total y props.completed.-
-
+import React from 'react';
 import './TodoCounter.css';
 
 const styleH1 = {
