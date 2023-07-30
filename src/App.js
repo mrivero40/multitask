@@ -36,9 +36,9 @@ function App() {
   const completeTodo = (text) => {
     const newTodos = [...todos];
     const todoIndex = newTodos.findIndex(
-      todo => todo.text == text
+      todo => todo.text === text
     );
-    if(newTodos[todoIndex].completed == false) {
+    if(newTodos[todoIndex].completed === false) {
       newTodos[todoIndex].completed = true;
     } else {
       newTodos[todoIndex].completed = false;
@@ -49,7 +49,7 @@ function App() {
   const deleteTodo = (text) => {
     const newTodos = [...todos];
     const todoIndex = newTodos.findIndex(
-      todo => todo.text == text
+      todo => todo.text === text
     );
     newTodos.splice(todoIndex, 1);
     setTodos(newTodos);
