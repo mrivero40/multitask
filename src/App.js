@@ -5,7 +5,7 @@ import { TodoList } from './TodoList.js';
 import { TodoItem } from './TodoItem.js';
 import { TodoCreateButton } from './TodoCreateButton.js';
 
-const defaultTodos = [
+/*const defaultTodos = [
   { text: 'Curso de React.js', completed: false },
   { text: 'Curso Intermedio de TypeScript', completed: false },
   { text: 'Audiocurso de Accesibilidad', completed: true },
@@ -15,11 +15,37 @@ const defaultTodos = [
   { text: 'Audiocurso de Accesibilidad 2', completed: true },
   { text: 'Curso Intro Bases de Datos 2', completed: false },
 ];
+localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));*/
+
+function useLocalStorage(itemName, initialValue) { // custom hook por convención comienzan con "useNombreDelHook"
+
+  const localStorageItem = localStorage.getItem(itemName);
+
+  let parsedItem;
+
+  if(!localStorageItem) {
+    localStorage.getItem(itemName, JSON.stringify(initialValue));
+    parsedItem = initialValue;
+  } else {
+    parsedItem = JSON.parse(localStorageItem);
+  };
+
+  const [item, setItem] = React.useState(parsedItem);
+
+  const saveItem = (newItem) => {
+    localStorage.setItem(itemName, JSON.stringify(newItem));
+    setItem(newItem);
+  };
+
+  return [item, saveItem];
+};
 
 function App() {
+
+  const [todos, saveTodos] = useLocalStorage('TODOS_V1', []);
+
   const [searchValue, setSearchValue] = React.useState('');
 
-  const [todos, setTodos] = React.useState(defaultTodos);
   const completedTodos = todos.filter(
     todo => !!todo.completed
   ).length;
@@ -43,7 +69,7 @@ function App() {
     } else {
       newTodos[todoIndex].completed = false;
     };
-    setTodos(newTodos);
+    saveTodos(newTodos);
   };
 
   const deleteTodo = (text) => {
@@ -52,7 +78,7 @@ function App() {
       todo => todo.text === text
     );
     newTodos.splice(todoIndex, 1);
-    setTodos(newTodos);
+    saveTodos(newTodos);
   };
 
   return (
