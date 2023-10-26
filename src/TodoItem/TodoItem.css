@@ -8,6 +8,10 @@
   box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
 }
 
+.TodoItem:hover {
+  background-color: #B3B3B3;
+}
+
 .TodoItem-p {
   margin: 24px 0 24px 24px;
   width: calc(100% - 120px);

@@ -7,9 +7,10 @@ function TodoSearch({
 }) {    
 
     return (
-        <div className="search-container">
+        <div className="TodoSearch">
             <input
-                placeholder="Introduce para buscar"
+                className="InputSearch"
+                placeholder="Buscar"
                 value={searchValue}
                 onChange={ (event) => {
                     setSearchValue(event.target.value);                                       
