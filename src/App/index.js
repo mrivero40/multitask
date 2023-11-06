@@ -1,88 +1,14 @@
 import React from 'react';
-
+import { TodoProvider } from '../TodoContext';
 import { AppUI } from './AppUI';
-import { useLocalStorage } from './useLocalStorage';
 
-/*const defaultTodos = [
-  { text: 'Curso de React.js', completed: false },
-  { text: 'Curso Intermedio de TypeScript', completed: false },
-  { text: 'Audiocurso de Accesibilidad', completed: true },
-  { text: 'Curso Intro Bases de Datos', completed: false },
-  { text: 'Curso de React.js 2', completed: false },
-  { text: 'Curso Intermedio de TypeScript 2', completed: false },
-  { text: 'Audiocurso de Accesibilidad 2', completed: true },
-  { text: 'Curso Intro Bases de Datos 2', completed: false },
-];
-localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));*/
-
-
-
-function App() {
-
-  const {
-    item: todos,
-    saveItem: saveTodos,
-    loading,
-    error,
-  } = useLocalStorage('TODOS_V1', []);
-
-  const [searchValue, setSearchValue] = React.useState('');
-  
-  const completedTodos = todos.filter(
-    todo => !!todo.completed
-  ).length;
-  const totalTodos = todos.length;
-
-  
-
-  const searchedTodos = todos.filter(
-    todo => {
-      const textTodo = todo.text.toLowerCase();
-      const textSearch = searchValue.toLowerCase();
-      return textTodo.includes(textSearch);
-    }
-  );
-
-  const completeTodo = (text) => {
-    const newTodos = [...todos];
-    const todoIndex = newTodos.findIndex(
-      todo => todo.text === text
-    );
-    if(newTodos[todoIndex].completed === false) {
-      newTodos[todoIndex].completed = true;
-    } else {
-      newTodos[todoIndex].completed = false;
-    };
-    saveTodos(newTodos);
-  };
-
-  const deleteTodo = (text) => {
-    const newTodos = [...todos];
-    const todoIndex = newTodos.findIndex(
-      todo => todo.text === text
-    );
-    newTodos.splice(todoIndex, 1);
-    saveTodos(newTodos);
-  };
-
-    const complete = todos.length === todos.filter(
-        todo => !!todo.completed
-    ).length;    
+function App() {  
 
   return (
-    <AppUI
-      loading={loading}
-      error={error}
-      completedTodos={completedTodos}
-      totalTodos={totalTodos}
-      searchValue={searchValue}
-      setSearchValue={setSearchValue}
-      searchedTodos={searchedTodos}
-      completeTodo={completeTodo}
-      deleteTodo={deleteTodo}
-      complete={complete}
-    />
+    <TodoProvider>
+      <AppUI />
+    </TodoProvider>
   );
-}
+};
 
 export default App;

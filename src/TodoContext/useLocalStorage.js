@@ -28,7 +28,7 @@ function useLocalStorage(itemName, initialValue) { // custom hook por convenció
       }
     }, 3000);    
     
-  }, []);    
+  }, []);
   
   const saveItem = (newItem) => {
     localStorage.setItem(itemName, JSON.stringify(newItem));
@@ -44,3 +44,15 @@ function useLocalStorage(itemName, initialValue) { // custom hook por convenció
 };
 
 export {  useLocalStorage };
+
+/*const defaultTodos = [
+  { text: 'Curso de React.js', completed: false },
+  { text: 'Curso Intermedio de TypeScript', completed: false },
+  { text: 'Audiocurso de Accesibilidad', completed: true },
+  { text: 'Curso Intro Bases de Datos', completed: false },
+  { text: 'Curso de React.js 2', completed: false },
+  { text: 'Curso Intermedio de TypeScript 2', completed: false },
+  { text: 'Audiocurso de Accesibilidad 2', completed: true },
+  { text: 'Curso Intro Bases de Datos 2', completed: false },
+];
+localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));*/

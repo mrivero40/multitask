@@ -3,7 +3,17 @@ import './TodosCreator.css';
 
 function TodosCreator() {
     return (
-        <p>Error...</p>
+        <>
+            <div className="🤚">
+                <div className="👉"></div>
+                <div className="👉"></div>
+                <div className="👉"></div>
+                <div className="👉"></div>
+                <div className="🌴"></div>		
+                <div className="👍"></div>            
+            </div>
+            <p>Crea desde el botón !!</p>
+        </>
     );
 };
 

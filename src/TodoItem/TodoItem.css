@@ -13,7 +13,8 @@
 }
 
 .TodoItem-p {
-  margin: 24px 0 24px 24px;
+  margin: 8px 0 8px 24px;
+  padding: 0;
   width: calc(100% - 120px);
   font-size: 18px;
   line-height: 24px;
