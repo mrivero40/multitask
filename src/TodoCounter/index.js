@@ -1,32 +1,33 @@
 // Destructurando props con el nombre de la props.propiedad que queremos utilizar = recibir props y utilizar props.total y props.completed.-
 import React from 'react';
 import './TodoCounter.css';
+import { TodoContext } from '../TodoContext';
 
-function TodoCounter({
-    total,
-    completed,
-    complete,
-}) {
-
+function TodoCounter() {
+    const {
+        totalTodos,
+        completedTodos,
+        complete,
+    } = React.useContext(TodoContext)
     return (
         <header>
             <h1>
                 <span>APP</span>-titud
             </h1>            
                             
-            {total !== completed && (
+            {totalTodos !== completedTodos && (
                 <h2>
-                    Completados <span>{completed}</span> de <span>{total}</span> objetivos
+                    Completados <span>{completedTodos}</span> de <span>{totalTodos}</span> objetivos
                 </h2>
             )}
 
-            {(total === 0 && completed === 0) && (
+            {(totalTodos === 0 && completedTodos === 0) && (
                 <h2>
                     Bienvenido!! 😎
                 </h2>
             )}
 
-            {(complete && completed > 0) && (
+            {(complete && completedTodos > 0) && (
                 <h2>
                     Felicitaciones!! 😍
                 </h2>
