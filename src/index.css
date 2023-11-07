@@ -3,4 +3,5 @@ body {
   padding: 0;
   font-family: 'Ubuntu', 'Roboto', 'Oxygen', 'Helvetica Neue', sans-serif;
   background-color: #f2f4f5;
+  box-sizing: border-box;
 }

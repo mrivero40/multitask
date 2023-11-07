@@ -1,16 +1,16 @@
 import React from 'react';
 import "./TodoCreateButton.css";
+import { TodoContext } from '../TodoContext';
 
 function TodoCreateButton() {
+    const {toggleTodo} = React.useContext(TodoContext);
     return (
         <button
         className="button-create"
         onClick={
-            (event) => {
-                console.log('click');
-                console.log(event);
-                console.log(event.target);
-            } }
+            () => {
+                toggleTodo();                
+            }}
         >+</button>
     );
 };

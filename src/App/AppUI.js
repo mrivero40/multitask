@@ -45,6 +45,7 @@ function AppUI () {
           deleteTodo,
           openModal,
           setOpenModal,
+          toggleTodo,
         }) => (
           <>
             <TodoList>
@@ -68,7 +69,13 @@ function AppUI () {
 
             {openModal && (
             <Modal>
-              Funcion agregar MODAL
+              <span>Crear Tarea !!</span>
+              <input placeholder="Ingresa la tarea"></input>
+              <button
+              >crear</button>
+              <button
+                onClick={toggleTodo}
+              >close</button>
             </Modal>
             )}
           </>
