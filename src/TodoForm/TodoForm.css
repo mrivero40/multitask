@@ -1,0 +1,40 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.text-area {
+    height: 4rem;
+    padding: .5rem;
+    resize: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button-cancel, .button-save {
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    border: none;  
+}
+
+.button-save {
+    background-color: #F5B041;    
+    font-size: 1rem;
+}
+
+.button-cancel {
+    background-color: transparent;
+    color: white;    
+}
+
+.button-cancel:hover {
+    background-color: lightgrey;
+    color: red;
+    border: 1px solid grey;
+}

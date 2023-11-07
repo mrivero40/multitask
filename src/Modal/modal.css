@@ -17,6 +17,7 @@
     box-sizing: border-box;
     padding: 2rem;
     width: 90vw;
+    max-width: 400px;
     height: 40vh;
     color: white;
     text-align: center;

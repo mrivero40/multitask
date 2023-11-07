@@ -9,6 +9,7 @@ import { TodosErrors } from '../TodosErrors';
 import { TodosCreator } from '../TodosCreator';
 import { TodoCreateButton } from '../TodoCreateButton';
 import { Modal } from '../Modal';
+import { TodoForm } from '../TodoForm';
 import { TodoContext } from '../TodoContext';
 
 
@@ -44,8 +45,6 @@ function AppUI () {
           completeTodo,
           deleteTodo,
           openModal,
-          setOpenModal,
-          toggleTodo,
         }) => (
           <>
             <TodoList>
@@ -69,13 +68,7 @@ function AppUI () {
 
             {openModal && (
             <Modal>
-              <span>Crear Tarea !!</span>
-              <input placeholder="Ingresa la tarea"></input>
-              <button
-              >crear</button>
-              <button
-                onClick={toggleTodo}
-              >close</button>
+              <TodoForm />
             </Modal>
             )}
           </>
