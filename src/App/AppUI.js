@@ -10,73 +10,59 @@ import { TodosCreator } from '../TodosCreator';
 import { TodoCreateButton } from '../TodoCreateButton';
 import { Modal } from '../Modal';
 import { TodoForm } from '../TodoForm';
+import { Footer } from '../Footer';
 import { TodoContext } from '../TodoContext';
 
 
 function AppUI () {
-  // const {
-  //   loading,
-  //   error,
-  //   searchedTodos,
-  //   completeTodo,
-  //   deleteTodo,
-  // } = React.useContext(TodoContext);
+  
   return (
-        /* </React.Fragment> = <> componentes </> */
-    <>
     
-      <TodoCounter />
-          {/* //  completed={completedTodos}
-          //  total={totalTodos}
-          //  complete={complete} */}
-          
+    <TodoContext.Consumer> 
+      {({
+        loading,
+        error,
+        searchedTodos,
+        completeTodo,
+        deleteTodo,
+        openModal,
+      }) => (
+      <>
+        <TodoCounter />          
     
-      <TodoSearch />
-          {/* // searchValue={searchValue}
-          // setSearchValue={setSearchValue} */}
+        <TodoSearch />        
           
+        {/* recibe una render function, en los cuales recibimos las props necesarias */}      
           
-          {/* recibe una render function, en los cuales recibimos las props necesarias */}
-      <TodoContext.Consumer> 
-        {({
-          loading,
-          error,
-          searchedTodos,
-          completeTodo,
-          deleteTodo,
-          openModal,
-        }) => (
-          <>
-            <TodoList>
+        <TodoList>
 
-              {loading && <TodosLoading />}
-              {error && <TodosErrors />}                          
+          {loading && <TodosLoading />}
+          {error && <TodosErrors />}                          
                   
-              {searchedTodos.map(todo => (
-                <TodoItem
-                  key={todo.text}
-                  text={todo.text}
-                  completed={todo.completed}
-                  onComplete={() => completeTodo(todo.text)}
-                  onDelete={() => deleteTodo(todo.text)}
-                />
-              ))}
-              {(!error && !loading && searchedTodos.length === 0) && <TodosCreator />}
-            </TodoList>
-              
-            <TodoCreateButton />
+          {searchedTodos.map(todo => (
+            <TodoItem
+              key={todo.text}
+              text={todo.text}
+              completed={todo.completed}
+              onComplete={() => completeTodo(todo.text)}
+              onDelete={() => deleteTodo(todo.text)}
+            />
+          ))}
+          {(!error && !loading && searchedTodos.length === 0) && <TodosCreator />}
+        </TodoList>       
 
-            {openModal && (
-            <Modal>
-              <TodoForm />
-            </Modal>
-            )}
-          </>
-        )}        
-      
-      </TodoContext.Consumer>
-    </>
-        /* </React.Fragment> */
+        {openModal && (
+        <Modal>
+          <TodoForm />
+        </Modal>          
+        )}
+
+        <TodoCreateButton />
+
+        <Footer />
+      </>
+      )}
+    </TodoContext.Consumer>    
   );
 };
 

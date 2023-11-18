@@ -57,11 +57,31 @@ function TodoProvider({ children }) {
       const toggleTodo = () => {
         if(!openModal) {
           document.getElementById('modal').classList.toggle('active');
+          document.body.style.overflow = 'hidden';
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
           setOpenModal(true);
         }
         if(openModal) {
           document.getElementById('modal').classList.toggle('active');
+          document.body.style.overflow = 'auto';
           setOpenModal(false);
+        }
+      };
+
+      const addTodo = (text) => {
+        const newTodos = [...todos];
+
+        if(text.trim().length > 0) {
+          newTodos.push({
+            text,
+            completed: false,
+          });
+          saveTodos(newTodos);
         }
       };
 
@@ -80,13 +100,11 @@ function TodoProvider({ children }) {
             openModal,
             setOpenModal,
             toggleTodo,
+            addTodo,
         }}>
             {children}
         </TodoContext.Provider>
     );
 };
-
-{/* <TodoContext.Provider></TodoContext.Provider>
-<TodoContext.Consumer></TodoContext.Consumer> */}
 
 export { TodoContext, TodoProvider };

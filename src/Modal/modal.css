@@ -1,4 +1,4 @@
-.active {
+/* .active {
     position: absolute;
     background-color: #000000b9;
     width: 100%;
@@ -8,9 +8,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } */
   
-.Modal-Container {
+/* .Modal-Container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -24,4 +24,4 @@
     border-radius: 1rem;
     border: 3px solid #F5B041;
     background-color: #000000e3;
-}
+} */

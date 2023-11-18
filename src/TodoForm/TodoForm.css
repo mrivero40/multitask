@@ -1,15 +1,58 @@
+.display-modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -10;
+}
+
+.active {
+    background-color: #000000b9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+
+.Modal-Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    padding: 2rem;
+    width: 90vw;
+    max-width: 400px;
+    height: 35vh;
+    max-height: 250px;
+    margin-bottom: 4rem;
+    color: white;
+    text-align: center;
+    border-radius: 1rem;
+    border: 3px solid #F5B041;
+    background-color: #000000e3;
+}
+
 .form-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
     width: 100%;
+    position: relative;
 }
 
 .text-area {
-    height: 4rem;
+    height: 3rem;
     padding: .5rem;
+    text-align: center;
+    outline-color: #F5B041;
     resize: none;
+    border-radius: .5rem;
+    border: none;
+}
+
+label {
+    font-size: 1.2rem;
 }
 
 .button-container {
@@ -20,6 +63,7 @@
 .button-cancel, .button-save {
     padding: .5rem 1rem;
     border-radius: .5rem;
+    cursor: pointer;
     border: none;  
 }
 

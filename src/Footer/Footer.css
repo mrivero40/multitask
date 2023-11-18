@@ -1,0 +1,21 @@
+footer {
+    width: 100%;
+    height: auto;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+footer a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+footer a p {
+    padding: 1rem 0;
+    margin: 0;
+    color: grey;
+    font-size: 0.8rem;    
+}
