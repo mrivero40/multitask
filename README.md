@@ -1,12 +1,39 @@
-# Repositorio base del Curso de Introducción a React.js en Platzi
+# APP-titud
+:tw-1f680:Aplicación web para organizar tareas diarias/semanales/mensuales.
+Puedes crear tareas, marcarlas como completadas o eliminarlas.
+*Mobile First -> aún no ajustada a pantalla desktop.
+## Construcción
+A partir de la clonación del repositorio del Curso de Introducción de Platzi con el profesor JuanDC. Con la herramienta Create React App y utilizando gp-page para el Deploy.
+Simula la espera de datos alojados en localStore similar a si fueran consumidos desde una API -> Tiene distintos loading para diferentes estados, como lo puede ser error de datos o cuando no hay ninguna tarea.
+## Técnologias
+- HTML
+- CSS
+- JAVASCRIPT
+- REACT
+## Deploy
+En la rama gp-pages:
+https://mrivero40.github.io/multitask/
+## Repositorio
+Código al último commit del proyecto:
+https://github.com/mrivero40/multitask
+## Capturas:
 
-¡Hola, Platzinauta!
+Inicial:
+![Primera vista](https://raw.githubusercontent.com/mrivero40/multitask/main/public/primera-vista.png "Primera Vista")
 
-En este repositorio encontrarás el código de todas las clases del [Curso de Introducción a React.js](https://platzi.com/reactjs). Para empezar solo debes clonar este repositorio (`git clone`), instalar sus dependencias (`npm i`) y ejecutar la aplicación (`npm start`).
+Con tareas:
+![Vista con tareas](https://github.com/mrivero40/multitask/blob/main/public/vista-con-todos.png?raw=true "Vista con tareas")
 
-La rama principal contiene el código con el que eempezamos el curso. En las demás ramas encontrarás el código de las siguientes clases y finalmente el deploy de la aplicación.
+Tareas completadas:
+![Tareas completadas](https://github.com/mrivero40/multitask/blob/main/public/todos-complete.png?raw=true "Tareas completadas")
 
-¡Mucha suerte aprendiendo React! #NuncaParesDeAprender
+Modal crear tarea:
+![Modal abierto](https://github.com/mrivero40/multitask/blob/main/public/modal-nueva-tarea.png?raw=true "Modal abierto")
+
+Error de carga de datos:
+![Error de carga de datos](https://github.com/mrivero40/multitask/blob/main/public/error-de-carga.png?raw=true "Error de carga de datos")
+## Autor:
+Matias Ezequiel Rivero -> @mrivero40
 
 ## Getting Started with Create React App
 
