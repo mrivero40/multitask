@@ -18,21 +18,22 @@ Código al último commit del proyecto:
 https://github.com/mrivero40/multitask
 ## Capturas:
 
-Inicial:
+###### Inicial:
 ![Primera vista](https://raw.githubusercontent.com/mrivero40/multitask/main/public/primera-vista.png "Primera Vista")
 
-Con tareas:
+###### Con tareas:
 ![Vista con tareas](https://github.com/mrivero40/multitask/blob/main/public/vista-con-todos.png?raw=true "Vista con tareas")
 
-Tareas completadas:
+###### Tareas completadas:
 ![Tareas completadas](https://github.com/mrivero40/multitask/blob/main/public/todos-complete.png?raw=true "Tareas completadas")
 
-Modal crear tarea:
+###### Modal crear tarea:
 ![Modal abierto](https://github.com/mrivero40/multitask/blob/main/public/modal-nueva-tarea.png?raw=true "Modal abierto")
 
-Error de carga de datos:
+###### Error de carga de datos:
 ![Error de carga de datos](https://github.com/mrivero40/multitask/blob/main/public/error-de-carga.png?raw=true "Error de carga de datos")
-## Autor:
+
+###### Autor:
 Matias Ezequiel Rivero -> @mrivero40
 
 ## Getting Started with Create React App
