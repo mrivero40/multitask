@@ -1,5 +1,5 @@
 # APP-titud
-:tw-1f680:Aplicación web para organizar tareas diarias/semanales/mensuales.
+Aplicación web para organizar tareas diarias/semanales/mensuales.
 Puedes crear tareas, marcarlas como completadas o eliminarlas.
 *Mobile First -> aún no ajustada a pantalla desktop.
 ## Construcción
